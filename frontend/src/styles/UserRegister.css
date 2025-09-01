@@ -1,0 +1,128 @@
+/* Register Page Container */
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background: #f9f9ff;
+  min-height: calc(100vh - 9vh); /* leaves space for navbar */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: margin 0.3s ease, width 0.3s ease;
+}
+
+/* Sidebar States */
+.user-container.sidebar-open {
+  margin-left: 220px; /* when sidebar open */
+  width: calc(97% - 220px);
+}
+
+.user-container.sidebar-closed {
+  margin-left: 0; /* full width when sidebar closed */
+  width: 97%;
+}
+
+.user-content {
+  width: 100%;
+  max-width: 800px;          /* limit width so it looks nice */
+  padding: 20px;
+  background: transparent;
+  border-radius: 12px;
+}
+
+/* Heading */
+.user-container h2 {
+  margin-bottom: 20px;
+  color: #0077ff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Form Styles */
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Labels */
+.user-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+.user-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.user-form input:focus {
+  border-color: #0077ff;
+  box-shadow: 0px 0px 5px rgba(0, 119, 255, 0.4);
+}
+
+/* Error Message */
+.error {
+  font-size: 13px;
+  color: #ff4d4d;
+  margin-top: -8px;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+.btn-submit {
+  background: linear-gradient(90deg, #0077ff, #00d084);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(90deg, #005fcc, #00b36b);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .user-container.sidebar-open {
+    margin-left: 0;
+    width: 100%;
+  }
+  .user-form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-form {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .user-form input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn-submit {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,89 @@
+.vendor-list-container {
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar States */
+.vendor-list-container.sidebar-open {
+  margin-left: 220px; /* adjust when sidebar open */
+  width: calc(97% - 220px);
+}
+
+.vendor-list-container.sidebar-closed {
+  margin-left: 0; /* full width when sidebar closed */
+  width: 97%;
+}
+
+.vendor-list-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.search-box {
+  width: 50%;
+  max-width: 400px;
+  padding: 10px 15px;
+  margin: 15px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+}
+
+
+.vendor-table-wrapper {
+  overflow-x: auto; /* Responsive scroll */
+  margin: 20px auto;
+}
+
+.vendor-table {
+  width: 95%;   /* table not sticking to edges */
+  border-collapse: collapse;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.vendor-table th,
+.vendor-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.vendor-table th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.vendor-table tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s ease;
+}
+
+.no-vendors {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .vendor-table th,
+  .vendor-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

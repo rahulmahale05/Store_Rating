@@ -1,0 +1,176 @@
+/* Container */
+.dashboard-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f2f5 0%, #d9e2ec 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+.dashboard-container:hover {
+  background: linear-gradient(135deg, #e0f7fa 0%, #d0e8f2 100%);
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #222;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease forwards;
+}
+
+/* 🔍 Search Bar Styling */
+.search-bar {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+
+  background-color: #fff;
+  color: #333;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.search-bar:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Placeholder Text */
+.search-bar::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+
+/* Grid Layout */
+.vendors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@media (min-width: 600px) {
+  .vendors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .vendors-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Vendor Card */
+.vendor-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.vendor-card:hover {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Vendor Info */
+.vendor-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.vendor-name:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.vendor-info {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.vendor-info strong {
+  color: #333;
+}
+
+/* Star Rating */
+.stars {
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.star {
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.star.filled {
+  color: #ffb400;
+  transform: scale(1.2);
+}
+
+.star:hover {
+  color: #ffd633;
+  transform: scale(1.3);
+}
+
+.star:hover ~ .star {
+  color: #ccc;
+  transform: scale(1);
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #0088cc 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
