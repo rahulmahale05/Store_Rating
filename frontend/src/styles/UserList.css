@@ -4,6 +4,7 @@
   padding: 20px;
   margin-left: 260px; /* adjust if you have sidebar */
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 /* Sidebar States */

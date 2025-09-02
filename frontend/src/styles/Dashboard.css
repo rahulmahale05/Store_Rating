@@ -3,6 +3,7 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 /* When sidebar open */
