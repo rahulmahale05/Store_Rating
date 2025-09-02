@@ -7,12 +7,12 @@
 /* Sidebar States */
 .vendor-list-container.sidebar-open {
   margin-left: 220px; /* adjust when sidebar open */
-  width: calc(97% - 220px);
+  width: calc(100% - 220px);
 }
 
 .vendor-list-container.sidebar-closed {
   margin-left: 0; /* full width when sidebar closed */
-  width: 97%;
+  width: 100%;
 }
 
 .vendor-list-container h2 {
@@ -81,6 +81,10 @@
 }
 
 @media (max-width: 768px) {
+  .vendor-list-container.sidebar-open {
+  margin-left: 0px; 
+  width: calc(100%);
+}
   .vendor-table th,
   .vendor-table td {
     padding: 10px;

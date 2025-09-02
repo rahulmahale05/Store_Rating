@@ -93,7 +93,8 @@ const VendorPage = ({ isSidebarOpen }) => {
         />
 
         <label>Store Address</label>
-        <textarea
+        <input
+          type="text"
           name="storeAddress"
           value={formData.storeAddress}
           onChange={handleChange}
@@ -111,35 +112,6 @@ const VendorPage = ({ isSidebarOpen }) => {
 
         <button type="submit" className="btn-submit">Register Vendor</button>
       </form>
-
-      {/* Vendor List Preview */}
-      {vendors.length > 0 && (
-        <div className="vendor-list">
-          <h3>📋 Registered Vendors</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Store Owner</th>
-                <th>Store Name</th>
-                <th>Store ID</th>
-                <th>Store Address</th>
-                <th>Password</th> {/* show password column */}
-              </tr>
-            </thead>
-            <tbody>
-              {vendors.map((vendor, index) => (
-                <tr key={index}>
-                  <td>{vendor.ownerName}</td>
-                  <td>{vendor.storeName}</td>
-                  <td>{vendor.storeId}</td>
-                  <td>{vendor.password}</td> {/* display password */}
-                  <td>{vendor.storeAddress}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
     </div>
   );
 };

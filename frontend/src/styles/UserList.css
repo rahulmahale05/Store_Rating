@@ -1,3 +1,4 @@
+/* Base Layout */
 .vendor-container {
   flex: 1;
   padding: 20px;
@@ -8,12 +9,12 @@
 /* Sidebar States */
 .vendor-container.sidebar-open {
   margin-left: 220px; /* when sidebar open */
-  width: calc(97% - 220px);
+  width: calc(100% - 220px);
 }
 
 .vendor-container.sidebar-closed {
   margin-left: 0; /* full width when sidebar closed */
-  width: 97%;
+  width: 100%;
 }
 
 .vendor-container h1 {
@@ -65,7 +66,7 @@
 .table-wrapper {
   border-radius: 12px;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: auto; /* allows horizontal scroll on small screens */
   margin: 20px auto;
 }
 
@@ -126,5 +127,32 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .vendor-container.sidebar-open {
+    margin-left: 0px; /* when sidebar open */
+    width: calc(100%);
+}
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .vendor-content {
+    padding: 10px;
+    margin: 15px auto;
+  }
+  .search-box {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  .vendor-list th,
+  .vendor-list td {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .vendor-container h1 {
+    font-size: 18px;
   }
 }

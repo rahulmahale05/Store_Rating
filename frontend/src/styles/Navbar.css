@@ -1,6 +1,7 @@
 /* Navbar Container */
 .navbar {
   height: 9vh;
+  width: 100%;
   margin: 0;
   background: linear-gradient(90deg, #0077ff, #00d084);
   display: flex;
@@ -37,6 +38,7 @@
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
+  white-space: nowrap; /* Prevent breaking */
 }
 .logo span {
   color: #ffeb3b; /* Highlight 'Store' */
@@ -70,3 +72,51 @@
   font-size: 18px;
 }
 
+/* ✅ Responsive Styling */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .logout-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .menu-icon {
+    font-size: 26px;
+  }
+  .logout-btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 100%;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  .menu-icon {
+    font-size: 24px;
+  }
+  .logout-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .logout-btn span { /* Hide text on very small devices */
+    display: none;
+  }
+}
